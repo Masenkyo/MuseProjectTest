@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float time;
+    float timeCap = 5;
+    [SerializeField] int dashCount;
+    int dashCap = 3;
     bool dash = false;
     bool swap = false;
     GameObject Player;
+    [SerializeField] Text DashCount;
     void Start()
     {
         Player = GameObject.Find("Player");
@@ -23,17 +29,15 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.S)) Player.transform.position -= new Vector3(0, 0, moveSpeed * Time.deltaTime);
         if (Input.GetKey(KeyCode.A)) Player.transform.position -= new Vector3(moveSpeed * Time.deltaTime, 0, 0);
         if (Input.GetKey(KeyCode.D)) Player.transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
-        if (Input.GetKeyDown(KeyCode.Space) && dash == false) dash = true;
+        if (Input.GetKeyDown(KeyCode.Space) && dash == false && dashCount > 0)
+        {
+            dash = true;
+            dashCount -= 1;
+        }
         if (dash == true)
         {
-            if (moveSpeed < 20 && swap == false)
-            {
-                moveSpeed += 75 * Time.deltaTime;
-            }
-            if (moveSpeed >= 20)
-            {
-                swap = true;
-            }
+            if (moveSpeed < 20 && swap == false) moveSpeed += 75 * Time.deltaTime;
+            if (moveSpeed >= 20) swap = true;
             if (swap == true)
             {
                 moveSpeed -= 75 * Time.deltaTime;
@@ -44,7 +48,14 @@ public class Movement : MonoBehaviour
                 swap = false;
                 dash = false;
             }
-        }        
+        }   
+        if (dashCount < dashCap) time += Time.deltaTime;
+        if (time >= timeCap)
+        {
+            time = 0;
+            dashCount += 1;
+        }
+        DashCount.text = "Dashes = " + dashCount.ToString();
     }
 }
 /*
