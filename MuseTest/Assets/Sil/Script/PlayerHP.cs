@@ -18,6 +18,6 @@ public class PlayerHP : MonoBehaviour
     void Update()
     {
         if (hp > maxHp) hp = maxHp;
-        HP.text = hp.ToString();
+        //HP.text = hp.ToString();
     }
 }
