@@ -1,23 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class Attack : MonoBehaviour
 {
-    
-    void Start()
-    {
-        
-    }
+    public List<GameObject> enemies = new List<GameObject>();
     void Update()
     {
-            
-    }
-    void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Enemy" && Input.GetButtonDown("Fire2"))
+        if (enemies.Count > 0 && Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("hit");
+            foreach (GameObject enemy in enemies)
+            {
+                enemy.GetComponent<EnemyHP>().HP -= 1;
+            }
         }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        enemies.Add(other.gameObject);
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        enemies.Remove(other.gameObject);
     }
 }

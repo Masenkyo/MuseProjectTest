@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour
     }
     void Dash()
     {
-        if (Input.GetButtonDown("Fire1") && dash == false && dashCount > 0)
+        if (Input.GetButtonDown("Fire3") && dash == false && dashCount > 0)
         {
             dash = true;
             dashCount -= 1;
