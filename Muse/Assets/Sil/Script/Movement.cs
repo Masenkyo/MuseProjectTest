@@ -41,11 +41,11 @@ public class Movement : MonoBehaviour
         }
         if (dash == true)
         {
-            if (moveSpeed < 20 && swap == false) moveSpeed += 75 * Time.deltaTime;
-            if (moveSpeed >= 20) swap = true;
+            if (moveSpeed < 25 && swap == false) moveSpeed += 150 * Time.deltaTime;
+            if (moveSpeed >= 25) swap = true;
             if (swap == true)
             {
-                moveSpeed -= 75 * Time.deltaTime;
+                moveSpeed -= 150 * Time.deltaTime;
             }
             if (moveSpeed <= 5)
             {
