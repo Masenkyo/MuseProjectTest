@@ -67,5 +67,6 @@ public class Movement : MonoBehaviour
     {
         Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         Player.transform.rotation = Quaternion.LookRotation(move, move);
+        Debug.Log(Quaternion.LookRotation(move, move));
     }
 }
