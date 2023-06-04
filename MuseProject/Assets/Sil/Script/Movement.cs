@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Movement : MonoBehaviour
 {
     private CharacterController controller;
-    [SerializeField] float moveSpeed = 5f;
+    public float moveSpeed = 5f;
     [SerializeField] float time;
     float timeCap = 5;
     [SerializeField] int dashCount;
