@@ -66,6 +66,7 @@ public class Movement : MonoBehaviour
     void LookAround()
     {
         Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        if (move != new Vector3(0,0,0))
         Player.transform.rotation = Quaternion.LookRotation(move, move);
     }
 }
