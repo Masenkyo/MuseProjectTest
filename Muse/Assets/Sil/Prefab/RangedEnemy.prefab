@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2401304720518371628}
   - component: {fileID: 2401304720518371631}
   - component: {fileID: 2401304720518371627}
-  - component: {fileID: 2401304720518371624}
   - component: {fileID: 5469992757843563487}
   m_Layer: 3
   m_Name: RangedEnemy
@@ -30,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2401304720518371630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12953898, y: 47.395138, z: 0.34347317}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.2320778, y: 0.17888501, z: -0.040193923}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -113,22 +112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 10
---- !u!54 &2401304720518371624
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2401304720518371630}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 4
-  m_CollisionDetection: 0
 --- !u!114 &5469992757843563487
 MonoBehaviour:
   m_ObjectHideFlags: 0

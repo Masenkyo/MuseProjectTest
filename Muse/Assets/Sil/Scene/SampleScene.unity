@@ -777,6 +777,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 233083290672071370, guid: 459de52809e45b9488e4d7ef87c4dbd0,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1203465068739700656, guid: 459de52809e45b9488e4d7ef87c4dbd0,
         type: 3}
       propertyPath: DashCount
