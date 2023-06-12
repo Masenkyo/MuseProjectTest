@@ -195,6 +195,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RangedEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2401304720518371631, guid: 2fa7d67d82698a5409074a68ad807c22,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fa7d67d82698a5409074a68ad807c22, type: 3}
 --- !u!1 &705507993
@@ -780,6 +785,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2401304720518371631, guid: 1e5e155ac6af6b2479ab12a9368bc7f0,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e5e155ac6af6b2479ab12a9368bc7f0, type: 3}
 --- !u!1 &2143440575
@@ -916,6 +926,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1203465068739700660, guid: 459de52809e45b9488e4d7ef87c4dbd0,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1203465068739700661, guid: 459de52809e45b9488e4d7ef87c4dbd0,
         type: 3}

@@ -7,7 +7,7 @@ public class PlayerHP : MonoBehaviour
 {
     Text HP;
     GameObject Player;
-    int hp = 10;
+    public int hp = 10;
     int maxHp = 10;
     void Start()
     {
