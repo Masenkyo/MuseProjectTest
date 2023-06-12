@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     [SerializeField] float time;
     float timeCap = 5;
     [SerializeField] int dashCount;
-    int dashCap = 3;
+    public int dashCap = 3;
     bool dash = false;
     bool swap = false;
     GameObject Player;

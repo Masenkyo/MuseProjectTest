@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa8f74e3483a21e469a73b57943f674d, type: 3}
-  m_Name: Paddo
+  m_Script: {fileID: 11500000, guid: bbc4f604df61d874a97297b7eedeebb8, type: 3}
+  m_Name: Dash
   m_EditorClassIdentifier: 
-  HealthAmount: 1
-  SpeedAmount: -1
+  DashAmount: 1
+  VignetteValue: 0.1
