@@ -7,8 +7,8 @@ public class PlayerHP : MonoBehaviour
 {
     Text HP;
     GameObject Player;
-    int hp = 10;
-    int maxHp = 10;
+    public int hp = 3;
+    public int maxHp = 3;
     void Start()
     {
         Player = GameObject.Find("Player");
