@@ -11,15 +11,17 @@ public class Movement : MonoBehaviour
     float timeCap = 5;
     [SerializeField] int dashCount;
     public int dashCap = 3;
-    bool dash = false;
-    bool swap = false;
-    GameObject Player;
+    bool dash = false,swap = false;
     [SerializeField] Text DashCount;
+    private Animator Animator;
+    
+    private float scale = 0.2300002f;
     void Start()
     {
         controller = gameObject.AddComponent<CharacterController>();
-        Player = GameObject.Find("Player");
+        Animator = GetComponent<Animator>();
     }
+
     void Update()
     {
         Walk();
@@ -34,16 +36,16 @@ public class Movement : MonoBehaviour
     }
     void Dash()
     {
-        if (Input.GetButtonDown("Fire3") && dash == false && dashCount > 0)
+        if (Input.GetButtonDown("Fire3") && !dash && dashCount > 0)
         {
             dash = true;
-            dashCount -= 1;
+            dashCount--;
         }
-        if (dash == true)
+        if (dash)
         {
-            if (moveSpeed < 25 && swap == false) moveSpeed += 150 * Time.deltaTime;
+            if (moveSpeed < 25 && !swap) moveSpeed += 150 * Time.deltaTime;
             if (moveSpeed >= 25) swap = true;
-            if (swap == true)
+            if (swap)
             {
                 moveSpeed -= 150 * Time.deltaTime;
             }
@@ -65,8 +67,28 @@ public class Movement : MonoBehaviour
     #endregion Movement
     void LookAround()
     {
-        Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-        if (move != new Vector3(0,0,0))
-        Player.transform.rotation = Quaternion.LookRotation(move, move);
+        if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            Animator.SetBool("H", true);
+            transform.localScale = new Vector3(scale, scale, scale);
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+            Animator.SetBool("H", true);
+            transform.localScale = new Vector3(-scale, scale, scale);
+        }
+        else
+        {
+            Animator.SetBool("H", false);
+        }
+        if (Input.GetAxisRaw("Vertical") != 0)
+        {
+            Animator.SetFloat("V", Input.GetAxisRaw("Vertical"));
+        }
+        else
+        {
+            Animator.SetFloat("V", 0);
+        }
+
     }
 }
