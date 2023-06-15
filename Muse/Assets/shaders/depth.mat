@@ -59,7 +59,7 @@ Material:
     - _Blend: 0
     - _CastShadows: 1
     - _Cull: 0
-    - _DepthDistance: 1.38
+    - _DepthDistance: 1.61
     - _DstBlend: 10
     - _QueueControl: 0
     - _QueueOffset: 0
