@@ -63,8 +63,8 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RefractScale: -0.1
-    - _RefractSpeed: 9.89
+    - _RefractScale: 0.29
+    - _RefractSpeed: 10.64
     - _Refraction: 0.78
     - _RefractionStrength: 0.92
     - _SrcBlend: 5
@@ -74,7 +74,7 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _BulgeRange: {r: 0, g: 0, b: 0, a: 0}
+    - _BulgeRange: {r: 1, g: 0, b: 0, a: 0}
     - _Color: {r: 1.7547169, g: 0.082682945, b: 1.0409273, a: 0}
     - _FresnelColor: {r: 0, g: 1.4980391, b: 0.0092950985, a: 0}
   m_BuildTextureStacks: []

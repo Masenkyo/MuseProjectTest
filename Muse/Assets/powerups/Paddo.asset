@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Paddo
   m_EditorClassIdentifier: 
   HealthAmount: 1
-  SpeedAmount: -1
+  SpeedAmount: -0.5

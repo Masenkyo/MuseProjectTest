@@ -76,6 +76,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PowerUpEffect: {fileID: 11400000, guid: 5690d60b6ce741548943e93443aba431, type: 2}
+  drunk: {fileID: 9106030818279303756, guid: e99e016bf34626949a14fd8d4649dd0f, type: 3}
+  cam: {fileID: 5692196838149071389, guid: dc174ec14a4872b438588b3539e2495f, type: 3}
 --- !u!1 &8438845835160449009
 GameObject:
   m_ObjectHideFlags: 0
