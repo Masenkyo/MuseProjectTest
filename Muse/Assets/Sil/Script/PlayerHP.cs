@@ -7,8 +7,9 @@ public class PlayerHP : MonoBehaviour
 {
     Text HP;
     GameObject Player;
-    public int hp = 10;
-    public int maxHp = 10;
+    public float hp = 100;
+    public float maxHp = 100;
+    public Slider hpSlider;
     void Start()
     {
         Player = GameObject.Find("Player");
@@ -17,6 +18,12 @@ public class PlayerHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CalculateHealth();
         if (hp > maxHp) hp = maxHp;
+        hpSlider.value = CalculateHealth();
+    }
+    public float CalculateHealth()
+    {
+        return hp / maxHp;
     }
 }
