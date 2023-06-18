@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
     [SerializeField] Text DashCount;
     private Animator Animator;
     
-    private float scale = 0.2300002f;
+    private float scale = 0.4f;
     void Start()
     {
         controller = gameObject.AddComponent<CharacterController>();
@@ -27,6 +27,8 @@ public class Movement : MonoBehaviour
         Walk();
         Dash();
         LookAround();
+        Debug.Log(Input.GetAxisRaw("Horizontal"));
+        Debug.Log(Input.GetAxisRaw("Vertical"));
     }
     #region Movement
     void Walk()
@@ -67,12 +69,12 @@ public class Movement : MonoBehaviour
     #endregion Movement
     void LookAround()
     {
-        if (Input.GetAxisRaw("Horizontal") > 0)
+        if (Input.GetAxisRaw("Horizontal") < 0)
         {
             Animator.SetBool("H", true);
             transform.localScale = new Vector3(scale, scale, scale);
         }
-        else if (Input.GetAxisRaw("Horizontal") < 0)
+        else if (Input.GetAxisRaw("Horizontal") > 0)
         {
             Animator.SetBool("H", true);
             transform.localScale = new Vector3(-scale, scale, scale);
@@ -84,9 +86,11 @@ public class Movement : MonoBehaviour
         if (Input.GetAxisRaw("Vertical") != 0)
         {
             Animator.SetFloat("V", Input.GetAxisRaw("Vertical"));
+            Animator.SetBool("VV", false);
         }
         else
         {
+            Animator.SetBool("VV", true);
             Animator.SetFloat("V", 0);
         }
 
