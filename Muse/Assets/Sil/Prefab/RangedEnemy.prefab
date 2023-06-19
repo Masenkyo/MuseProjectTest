@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2401304720518371630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0019711116, y: 0.9992248, z: 0.0050563975}
+  m_LocalPosition: {x: 7.8784976, y: 13.15, z: -6.015778}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -97,9 +97,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 107c4d310bf59694081ebd6e1dcd0f6e, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   HP: 5
+  drug: {fileID: 8569640452995412033, guid: dcb1d05a0e7c90c49b0468183ca09177, type: 3}
 --- !u!114 &5469992757843563487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,8 +111,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4c541d3fc78d964383f74e48aa74197, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   rangedEnemy: {fileID: 2401304720518371630}
   enemy: {fileID: 2401304720518371630, guid: 1e5e155ac6af6b2479ab12a9368bc7f0, type: 3}
   player: {fileID: 1203465068739700661, guid: 459de52809e45b9488e4d7ef87c4dbd0, type: 3}
