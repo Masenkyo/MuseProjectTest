@@ -26,7 +26,7 @@ public class EnemySpawn : MonoBehaviour
             for (int j = 0; j < Spawn.Amounts[i]; j++)
             {
                 Instantiate(Spawn.Enemies[i], this.transform.position, Quaternion.identity);
-                yield return new WaitForSeconds(3f);
+                yield return new WaitForSeconds(6f);
             }
         }
     }
