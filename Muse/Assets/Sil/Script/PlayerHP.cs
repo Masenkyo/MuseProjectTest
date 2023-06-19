@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHP : MonoBehaviour
 {
@@ -21,9 +22,17 @@ public class PlayerHP : MonoBehaviour
         CalculateHealth();
         if (hp > maxHp) hp = maxHp;
         hpSlider.value = CalculateHealth();
+        ded();
     }
     public float CalculateHealth()
     {
         return hp / maxHp;
+    }
+    void ded()
+    {
+        if(hp < 0)
+        {
+            SceneManager.LoadScene("Died");
+        }
     }
 }
