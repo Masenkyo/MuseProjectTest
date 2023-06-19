@@ -7,8 +7,18 @@ public class Attack : MonoBehaviour
     public List<GameObject> enemies = new List<GameObject>();
     public float time = 0.4f;
     public bool ready = false;
+    public Animator Animator;
+
     void Update()
     {
+        if (Input.GetButtonDown("fire1") == true && ready == true) 
+        {
+            Animator.SetBool("Attacking", true);
+        }
+        else
+        {
+            Animator.SetBool("Attacking", false);
+        }
         if (time <= 0.5f) time += Time.deltaTime;
         if (enemies.Count > 0 && Input.GetButtonDown("Fire1") && ready == true)
         {
