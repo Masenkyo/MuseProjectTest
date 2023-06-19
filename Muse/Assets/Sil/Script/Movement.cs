@@ -77,10 +77,12 @@ public class Movement : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") < 0)
         {
             animatie.GetComponent<Animator>().SetBool("H", true);
+            animatie.transform.localScale = new Vector3(-scale, scale, scale);
         }
         else if (Input.GetAxisRaw("Horizontal") > 0)
         {
             animatie.GetComponent<Animator>().SetBool("H", true);
+            animatie.transform.localScale = new Vector3(scale, scale, scale);
         }
         else
         {
