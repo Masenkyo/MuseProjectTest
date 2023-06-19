@@ -13,9 +13,11 @@ public class Movement : MonoBehaviour
     public int dashCap = 3;
     bool dash = false,swap = false;
     [SerializeField] Text DashCount;
+    public GameObject Player;
+    public GameObject animatie;
     private Animator Animator;
     
-    private float scale = 0.4f;
+    private float scale = 1f;
     void Start()
     {
         controller = gameObject.AddComponent<CharacterController>();
@@ -69,29 +71,30 @@ public class Movement : MonoBehaviour
     #endregion Movement
     void LookAround()
     {
+        Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        if (move != new Vector3(0, 0, 0))
+            Player.transform.rotation = Quaternion.LookRotation(move, move);
         if (Input.GetAxisRaw("Horizontal") < 0)
         {
-            Animator.SetBool("H", true);
-            transform.localScale = new Vector3(scale, scale, scale);
+            animatie.GetComponent<Animator>().SetBool("H", true);
         }
         else if (Input.GetAxisRaw("Horizontal") > 0)
         {
-            Animator.SetBool("H", true);
-            transform.localScale = new Vector3(-scale, scale, scale);
+            animatie.GetComponent<Animator>().SetBool("H", true);
         }
         else
         {
-            Animator.SetBool("H", false);
+            animatie.GetComponent<Animator>().SetBool("H", false);
         }
         if (Input.GetAxisRaw("Vertical") != 0)
         {
-            Animator.SetFloat("V", Input.GetAxisRaw("Vertical"));
-            Animator.SetBool("VV", false);
+            animatie.GetComponent<Animator>().SetFloat("V", Input.GetAxisRaw("Vertical"));
+            animatie.GetComponent<Animator>().SetBool("VV", false);
         }
         else
         {
-            Animator.SetBool("VV", true);
-            Animator.SetFloat("V", 0);
+            animatie.GetComponent<Animator>().SetBool("VV", true);
+            animatie.GetComponent<Animator>().SetFloat("V", 0);
         }
 
     }
