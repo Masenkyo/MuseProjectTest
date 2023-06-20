@@ -29,8 +29,6 @@ public class Movement : MonoBehaviour
         Walk();
         Dash();
         LookAround();
-        Debug.Log(Input.GetAxisRaw("Horizontal"));
-        Debug.Log(Input.GetAxisRaw("Vertical"));
     }
     #region Movement
     void Walk()

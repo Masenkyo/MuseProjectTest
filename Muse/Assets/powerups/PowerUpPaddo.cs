@@ -11,8 +11,8 @@ public class PowerUpPaddo : PowerUpEffect
 
     public override void Apply(GameObject target)
     {
-        target.GetComponent<PlayerHP>().maxHp += HealthAmount;
-        target.GetComponent<PlayerHP>().hp += HealthAmount;
-        target.GetComponent<Movement>().moveSpeed += SpeedAmount;
+        target.GetComponentInChildren<PlayerHP>().maxHp += HealthAmount;
+        target.GetComponentInChildren<PlayerHP>().hp += HealthAmount;
+        target.GetComponentInChildren<Movement>().moveSpeed += SpeedAmount;
     }
 }

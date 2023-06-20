@@ -6,7 +6,7 @@ public class EnemyMove : MonoBehaviour
 {
     public GameObject rangedEnemy;
     public GameObject enemy;
-    public GameObject player;
+    private GameObject player;
     float enemyTime;
     float rEnemyTime;
     bool enemyReady = false;
