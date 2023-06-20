@@ -1653,6 +1653,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1203465068739700659, guid: 459de52809e45b9488e4d7ef87c4dbd0,
         type: 3}
+      propertyPath: hp
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1203465068739700659, guid: 459de52809e45b9488e4d7ef87c4dbd0,
+        type: 3}
+      propertyPath: maxHp
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1203465068739700659, guid: 459de52809e45b9488e4d7ef87c4dbd0,
+        type: 3}
       propertyPath: hpSlider
       value: 
       objectReference: {fileID: 78605320}
