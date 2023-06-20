@@ -8,6 +8,7 @@ public class EnemySpawn : MonoBehaviour
     public Spawns Spawn;
     [SerializeField] int wave = 0;
     public List<Spawns> SpawnList;
+    int randomnumber = 0;
 
     void Update()
     {
@@ -18,6 +19,7 @@ public class EnemySpawn : MonoBehaviour
             wave++;
         }
         if (wave > SpawnList.Count) wave = 0;
+        randomnumber = Random.Range(-3, 3);
     }
     IEnumerator wavestart()
     {
@@ -25,8 +27,8 @@ public class EnemySpawn : MonoBehaviour
         {
             for (int j = 0; j < Spawn.Amounts[i]; j++)
             {
-                Instantiate(Spawn.Enemies[i], this.transform.position, Quaternion.identity);
-                yield return new WaitForSeconds(6f);
+                Instantiate(Spawn.Enemies[i], transform.position += new Vector3(randomnumber, 0, randomnumber), Quaternion.identity);
+                yield return new WaitForSeconds(4f);
             }
         }
     }
