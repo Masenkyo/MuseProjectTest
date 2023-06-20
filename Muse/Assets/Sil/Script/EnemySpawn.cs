@@ -11,13 +11,13 @@ public class EnemySpawn : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) < 5)
+        if (Vector3.Distance(transform.position, player.transform.position) < 10)
         {
             Spawn = SpawnList[wave];
             StartCoroutine(wavestart());
             wave++;
         }
-        if (wave > SpawnList.Count) StopAllCoroutines();
+        if (wave > SpawnList.Count) wave = 0;
     }
     IEnumerator wavestart()
     {

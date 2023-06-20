@@ -1019,7 +1019,6 @@ MonoBehaviour:
   wave: 0
   SpawnList:
   - {fileID: 11400000, guid: 6177b51c8f7657e4bad54f355ba09c2c, type: 2}
-  - {fileID: 11400000, guid: 92250ca717419674e8801c5173c99126, type: 2}
 --- !u!4 &999276822
 Transform:
   m_ObjectHideFlags: 0
@@ -1028,7 +1027,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999276820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.88, y: 13.15, z: -6.02}
+  m_LocalPosition: {x: 7.88, y: 14.15, z: -6.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1247,7 +1246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082112428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.3, y: 13.15, z: -7.2}
+  m_LocalPosition: {x: 8.3, y: 14.15, z: -7.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
