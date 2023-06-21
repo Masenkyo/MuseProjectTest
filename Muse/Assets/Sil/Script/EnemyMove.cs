@@ -6,7 +6,7 @@ public class EnemyMove : MonoBehaviour
 {
     public GameObject rangedEnemy;
     public GameObject enemy;
-    private GameObject player;
+    public GameObject player;
     float enemyTime;
     float rEnemyTime;
     bool enemyReady = false;
@@ -14,7 +14,7 @@ public class EnemyMove : MonoBehaviour
     float speed = 2;
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.Find("a");
     }
 
     // Update is called once per frame

@@ -15,7 +15,7 @@ public class PowerUp : MonoBehaviour
         PowerUpEffect.Apply(collision.gameObject);
         if (once == true)
         {
-            Instantiate(drunk, cam.transform.position - new Vector3(0, 6, -3), drunk.transform.rotation);
+            Instantiate(drunk, new Vector3(9.5f, 15.5f, -16.25f), drunk.transform.rotation);
             once = false;
         }
     }
